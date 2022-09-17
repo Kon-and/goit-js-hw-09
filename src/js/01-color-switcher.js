@@ -12,23 +12,23 @@ startButton.addEventListener('click', onStartBtnClick);
 
 function onStartBtnClick(e) {
   e.target.disabled = true;
-  // stopButton.disabled = false;
+  stopButton.disabled = false;
 
-  // changeBodyColor();
+  changeBodyColor();
   timer = setInterval(changeBodyColor, 1000);
 
-  // stopButton.addEventListener('click', onStopBtnClick);
-  // startButton.removeEventListener('click', onStartBtnClick);
+  stopButton.addEventListener('click', onStopBtnClick);
+  startButton.removeEventListener('click', onStartBtnClick);
 }
 
 function onStopBtnClick(e) {
   e.target.disabled = true;
-  // startButton.disabled = false;
+  startButton.disabled = false;
 
   clearInterval(timer);
 
-  // startButton.addEventListener('click', onStartBtnClick);
-  // stopButton.removeEventListener('click', onStopBtnClick);
+  startButton.addEventListener('click', onStartBtnClick);
+  stopButton.removeEventListener('click', onStopBtnClick);
 }
 
 function changeBodyColor() {
