@@ -6,6 +6,10 @@ import 'notiflix/dist/notiflix-3.2.5.min.css';
 const timer = null;
 const startButton = document.querySelector('button[data-start]');
 const dateChosen = document.querySelector('#datetime-picker');
+const days = document.querySelector('[data-days]');
+const hours = document.querySelector('[data-hours]');
+const minutes = document.querySelector('[data-minutes]');
+const seconds = document.querySelector('[data-seconds]');
 
 startButton.disabled = true;
 
