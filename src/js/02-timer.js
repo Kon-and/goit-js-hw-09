@@ -3,7 +3,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 import Notiflix from 'notiflix';
 import 'notiflix/dist/notiflix-3.2.5.min.css';
 
-const timer = null;
+let timer = null;
 const startButton = document.querySelector('button[data-start]');
 const dateChosen = document.querySelector('#datetime-picker');
 const d = document.querySelector('[data-days]');
