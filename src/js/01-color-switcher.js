@@ -11,16 +11,12 @@ function backgroundColorSwitcher() {
   document.style.backgroundColor = getRandomHexColor();
 }
 
-function start() {
-  btnStart.addEventListener('click', () => {
-    timer = setInterval(backgroundColorSwitcher, 1000);
-    buttonStart.disabled = true;
-  });
-}
+btnStart.addEventListener('click', () => {
+  timer = setInterval(backgroundColorSwitcher, 1000);
+  buttonStart.disabled = true;
+});
 
-function stop() {
-  buttonStop.addEventListener('click', () => {
-    clearInterval(timer);
-    buttonStart.disabled = false;
-  });
-}
+buttonStop.addEventListener('click', () => {
+  clearInterval(timer);
+  buttonStart.disabled = false;
+});
