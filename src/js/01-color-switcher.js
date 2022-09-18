@@ -8,10 +8,10 @@ const buttonStop = document.querySelector('[data-stop]');
 let timer = 0;
 
 function backgroundColorSwitcher() {
-  document.style.backgroundColor = getRandomHexColor();
+  document.body.style.backgroundColor = getRandomHexColor();
 }
 
-btnStart.addEventListener('click', () => {
+buttonStart.addEventListener('click', () => {
   timer = setInterval(backgroundColorSwitcher, 1000);
   buttonStart.disabled = true;
 });
