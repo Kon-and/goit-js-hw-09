@@ -41,19 +41,18 @@ function countdown() {
     ).getTime();
     const now = new Date().getTime();
     const timeLeft = dateChoosenMs - now;
+    if (timeLeft < 1000) {
+      clearInterval(timer);
+      // startButton.disabled = false;
+      Notiflix.Notify.failure('Time is over!');
+    }
     const { days, hours, minutes, seconds } = convertToMs(timeLeft);
 
-    d.innerHTML = days < 10 ? zeroing(days) : days;
-    h.innerHTML = hours < 10 ? zeroing(hours) : hours;
-    m.innerHTML = minutes < 10 ? zeroing(minutes) : minutes;
-    s.innerHTML = seconds < 10 ? zeroing(seconds) : seconds;
-
-    if (timeLeft < 100) {
-      clearInterval(timer);
-      startButton.disabled = false;
-      alert('Time is over!');
-    }
-  }, 1000);
+    d.innerHTML = zeroing(days);
+    h.innerHTML = zeroing(hours);
+    m.innerHTML = zeroing(minutes);
+    s.innerHTML = zeroing(seconds);
+  }, 0);
 }
 
 function zeroing(value) {
