@@ -43,7 +43,6 @@ function countdown() {
     const timeLeft = dateChoosenMs - now;
     if (timeLeft < 1000) {
       clearInterval(timer);
-      // startButton.disabled = false;
       Notiflix.Notify.failure('Time is over!');
     }
     const { days, hours, minutes, seconds } = convertToMs(timeLeft);
